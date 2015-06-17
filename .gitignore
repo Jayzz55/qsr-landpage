@@ -1,2 +1,11 @@
 # Ignore assets design
 /assets/_Designs
+
+# Ignore package.json
+/package.json
+
+# Ignore node_modules
+/node_modules
+
+# Ignore gulpfile.js
+/gulpfile.js

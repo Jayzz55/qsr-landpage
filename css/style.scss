@@ -1,7 +1,7 @@
 /* UTILITIES */
 
 
-/* LEAD SECTION */
+/* NAVBAR SECTION */
 @media (min-width: 768px){
   .navbar-nav {
     margin: 0 auto;
@@ -95,5 +95,16 @@
     #register-btn-container{
       margin: auto;
     }
+  }
+}
+
+/* FAQ SECTION */
+#faq-section{
+  p {
+    display: inline-block;
+    width: 90%;
+  }
+  .glyphicon-chevron-down {
+    vertical-align: center;
   }
 }

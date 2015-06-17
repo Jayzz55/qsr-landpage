@@ -1,125 +1,35 @@
-/*HEADER SECTION*/
-#technical-logo {
-  margin: 40px auto; }
-
-/*LEAD SECTION*/
-#lead {
-  width: 100%;
-  height: 450px;
-  /* ie fallbacks */
-  background-image: url("../assets/background-ie3.jpg");
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background-ie3.jpg', sizingMethod='scale')";
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background-ie3.jpg', sizingMethod='scale');
-  /* desired styles */
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/background.jpg");
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../assets/background.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover; }
-  #lead #lead-text {
-    margin: auto;
-    margin-top: 145px;
-    color: white;
-    letter-spacing: 2px;
-    font-size: 2.5rem; }
-
-#tasty-text {
-  width: 140px; }
-
-/*CONTACT SECTION*/
-.contact-section {
-  background: black; }
-  .contact-section p {
-    color: #ddd; }
-
-#contact {
-  margin: auto;
-  width: 50%; }
-  #contact p {
-    font-size: 1.1rem;
-    color: #ccc;
-    line-height: 20px;
-    letter-spacing: 0.3px; }
-  #contact strong {
-    text-transform: uppercase; }
-
-#contact-message {
-  padding-top: 40px;
-  padding-bottom: 20px;
-  font-size: 2.5rem; }
-
-.center-line {
-  display: inline-block;
-  width: 100%;
-  height: 1px;
-  border-top: 1px solid #bbb;
-  margin: 30px auto; }
-
-/*FOOTER*/
-.footer-section {
-  background: black; }
-  .footer-section img {
+/* NAVBAR */
+@media (min-width: 768px){
+  .navbar-nav {
+    margin: 0 auto;
+    display: table;
+    table-layout: auto;
+    float: none;
     width: 100%;
-    margin: 10px auto; }
+  }
+  .navbar-nav>li {
+    display: table-cell;
+    float: none;
+    text-align: center;
+  }
+}
 
-#footer {
-  margin: auto;
-  width: 50%;
-  padding-bottom: 50px; }
+@media (max-width: 768px){
+  .navbar-nav>li {
+    text-align: center;
+  }
+}
 
-/* TABLET SIZE MEDIE QUERY */
-@media screen and (max-width: 1200px) {
-  /*CONTACT SECTION*/
-  #contact {
-    width: 80%; }
-  .center-line {
-    border-top: 3px solid #bbb; }
-  #footer {
-    margin: auto;
-    width: 80%;
-    padding-bottom: 50px; } }
+/* MENU NAV */
+#myTabs>li{
+  width: 25%;
+  height: 55px;
+  text-align: center;
+  vertical-align: center;
+}
 
-/* MOBILE SIZE MEDIE QUERY */
-@media screen and (max-width: 768px) {
-  /*HEADER SECTION*/
-  #technical-logo {
-    width: 60%; }
-  /*LEAD SECTION*/
-  #lead {
-    width: 100%;
-    height: 300px;
-    /* ie fallbacks */
-    background-image: url("../assets/background-ie4-small.jpg");
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background-ie4-small.jpg', sizingMethod='scale')";
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background-ie4-small.jpg', sizingMethod='scale');
-    /* desired styles */
-    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/background.jpg");
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/background.jpg"); }
-    #lead #lead-text {
-      margin-top: 70px;
-      font-size: 2.3rem; }
-  #tasty-text {
-    width: 150px;
-    display: block;
-    margin: auto;
-    padding-top: 20px;
-    padding-bottom: 10px; }
-  /*CONTACT SECTION*/
-  #contact {
-    margin: auto;
-    width: 90%; }
-    #contact p {
-      text-align: left;
-      font-size: 1.4rem;
-      line-height: 25px;
-      margin-bottom: 30px;
-      width: 230px; }
-  .center-line {
-    border-top: 3px solid #bbb;
-    margin-bottom: 30px; }
-  /*FOOTER SECTION*/
-  #footer {
-    margin: auto;
-    max-width: 400px; }
-    #footer img {
-      margin: 10px auto; } }
+@media (max-width: 768px){
+  #myTabs>li{
+    width: 50%;
+  }
+}

@@ -134,21 +134,8 @@ header {
   .col-md-4{
     padding-right: 0px;
   }
-  #windows-panel{
-    padding-top: 30px;
-    background: linear-gradient(to top, rgba(10,10,10,0.3), rgba(0,0,0,0));
-    padding-right: 0px;
-    height: 200px;
-    // width: 66.6666%
-  }
-  #empty-windows-panel{
-    height: 84px;
-    background: linear-gradient(to top, rgba(10,10,10,0.1), rgba(0,0,0,0));
-  }
-  .tab-content {
-    background: white;
-    height: 200px;
-    margin-bottom: 100px;
+  #windows-nav {
+    background: linear-gradient(to top, rgba(200,200,200,0.3), rgba(0,0,0,0));;
   }
 }
 
@@ -166,7 +153,6 @@ header {
 
 .tab-content {
   margin-bottom: 50px;
-
 }
 
 .tab-img {
@@ -208,13 +194,14 @@ header {
     height: 80px;
     width: 50%;
   }
-
   .tab-img {
     width: 80%;
   }
-
   #windows-bg-image {
     width: 80%;
+  }
+  #windows-main-image{
+    top: 5px;
   }
 }
 

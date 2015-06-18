@@ -104,22 +104,9 @@ header {
 #windows-section .col-md-4 {
   padding-right: 0px; }
 
-#windows-section #windows-panel {
-  padding-top: 30px;
-  background: -webkit-linear-gradient(bottom, rgba(10, 10, 10, 0.3), transparent);
-  background: linear-gradient(to top, rgba(10, 10, 10, 0.3), transparent);
-  padding-right: 0px;
-  height: 200px; }
-
-#windows-section #empty-windows-panel {
-  height: 84px;
-  background: -webkit-linear-gradient(bottom, rgba(10, 10, 10, 0.1), transparent);
-  background: linear-gradient(to top, rgba(10, 10, 10, 0.1), transparent); }
-
-#windows-section .tab-content {
-  background: white;
-  height: 200px;
-  margin-bottom: 100px; }
+#windows-section #windows-nav {
+  background: -webkit-linear-gradient(bottom, rgba(200, 200, 200, 0.3), transparent);
+  background: linear-gradient(to top, rgba(200, 200, 200, 0.3), transparent); }
 
 #windows-bg-image {
   width: 100%;
@@ -168,7 +155,9 @@ header {
   .tab-img {
     width: 80%; }
   #windows-bg-image {
-    width: 80%; } }
+    width: 80%; }
+  #windows-main-image {
+    top: 5px; } }
 
 /* REGISTER SECTION */
 #register-section .col-sm-6:first-child .form-control {

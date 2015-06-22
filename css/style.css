@@ -8,12 +8,12 @@
 header {
   height: 300px;
   /* ie fallbacks */
-  background-image: url("../assets/header_phase1.jpg");
+  background-image: url("/assets/header_phase1.jpg");
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/header_phase1.jpg', sizingMethod='scale')";
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/header_phase1.jpg', sizingMethod='scale');
   /* desired styles */
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/header_phase1.jpg");
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/header_phase1.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header_phase1.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header_phase1.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
@@ -28,12 +28,12 @@ header {
 #lead-section {
   color: #ddd;
   /* ie fallbacks */
-  background-image: url("../assets/background_pattern.jpg");
+  background-image: url("/assets/background_pattern.jpg");
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale')";
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale');
   /* desired styles */
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/background_pattern.jpg");
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/background_pattern.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/background_pattern.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/background_pattern.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
@@ -104,7 +104,7 @@ header {
 #windows-section {
   margin-bottom: 30px; }
   #windows-section #windows-nav {
-    padding-top: 60px;
+    padding-top: 30px;
     background: -webkit-linear-gradient(bottom, rgba(200, 200, 200, 0.3), transparent);
     background: linear-gradient(to top, rgba(200, 200, 200, 0.3), transparent); }
     #windows-section #windows-nav ul {
@@ -134,7 +134,7 @@ header {
     margin-top: 30px; }
   #windows-section .tab-img {
     width: 100%;
-    background-image: url("../assets/tab_backgroundgradient.png"); }
+    background-image: url("/assets/tab_backgroundgradient.png"); }
   #windows-section #windows-main-image {
     position: relative;
     top: -10px;
@@ -144,7 +144,8 @@ header {
     width: 120px;
     height: 50px;
     position: relative;
-    top: -15px; }
+    top: -15px;
+    margin-left: 10px; }
   #windows-section #pro-main-image {
     width: 65px;
     position: relative;
@@ -155,8 +156,8 @@ header {
     top: -16px; }
   #windows-section .nav-tabs > li.active > a, #windows-section .nav-tabs > li.active > a:focus, #windows-section .nav-tabs > li.active > a:hover {
     border: 1px solid transparent;
-    margin-top: -60px;
-    padding-top: 60px; }
+    margin-top: -30px;
+    padding-top: 30px; }
   #windows-section .nav-tabs > li > a {
     margin-top: -10px; }
   #windows-section .col-md-4 {
@@ -167,13 +168,14 @@ header {
     margin-bottom: 20px;
     padding: 10px;
     box-shadow: -1px 1px 10px 2px #8ecbfa;
+    border-radius: 8px;
     /* ie fallbacks */
-    background-image: url("../assets/background_pattern.jpg");
+    background-image: url("/assets/background_pattern.jpg");
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale')";
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale');
     /* desired styles */
-    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/background_pattern.jpg");
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/background_pattern.jpg");
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/background_pattern.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/background_pattern.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover; }
@@ -222,8 +224,22 @@ header {
 
 @media (max-width: 768px) {
   #windows-section #myTabs > li {
-    height: 80px;
-    width: 50%; }
+    height: 80px; }
+  #windows-section .tab-text {
+    height: 100px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center; }
+  #windows-section #windows-text {
+    font-size: 1.1rem;
+    color: #1b5fa1; }
+  #windows-section #starter-text {
+    margin-left: -5px;
+    color: #1fec28; }
+  #windows-section #pro-text {
+    color: #386bc1; }
+  #windows-section #plus-text {
+    color: #7445ed; }
   #windows-section .tab-img {
     width: 80%; }
   #windows-section #windows-bg-image {
@@ -232,9 +248,6 @@ header {
     left: -9px;
     top: -5px;
     width: 150px; }
-  #windows-section .nav-tabs > li.bottom-tabs.active > a:focus, #windows-section .nav-tabs > li.bottom-tabs.active > a:hover, #windows-section .nav-tabs > li.bottom-tabs.active > a:active, #windows-section .nav-tabs > li.bottom-tabs.active > a:visited, #windows-section .nav-tabs > li.bottom-tabs.active > a {
-    margin-top: 0;
-    padding-top: 17px; }
   #windows-section #windows-nav ul {
     width: 100%;
     margin-left: 0; }
@@ -246,23 +259,23 @@ header {
 #mac-section {
   margin-bottom: 30px;
   /* ie fallbacks */
-  background-image: url("../assets/background_mac.jpg");
+  background-image: url("/assets/background_mac.jpg");
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_mac.jpg', sizingMethod='scale')";
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_mac.jpg', sizingMethod='scale');
   /* desired styles */
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/background_mac.jpg");
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/background_mac.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/background_mac.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/background_mac.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
   #mac-section #mac-content {
     color: #888; }
   #mac-section #mac-nav {
-    padding-top: 60px;
+    padding-top: 30px;
     background: -webkit-linear-gradient(bottom, rgba(220, 220, 220, 0.3), transparent);
     background: linear-gradient(to top, rgba(220, 220, 220, 0.3), transparent); }
   #mac-section .register {
-    color: #27f; }
+    color: #1b5fa1; }
     #mac-section .register strong {
       text-decoration: underline; }
   #mac-section .nav-tabs {
@@ -286,7 +299,7 @@ header {
     margin-top: 30px; }
   #mac-section .tab-img {
     width: 100%;
-    background-image: url("../assets/tab_backgroundgradient.png"); }
+    background-image: url("/assets/tab_backgroundgradient.png"); }
   #mac-section #mac-main-image {
     position: relative;
     top: -10px;
@@ -294,8 +307,8 @@ header {
     margin-top: 10px; }
   #mac-section .nav-tabs > li.active > a, #mac-section .nav-tabs > li.active > a:focus, #mac-section .nav-tabs > li.active > a:hover {
     border: 1px solid transparent;
-    margin-top: -60px;
-    padding-top: 60px;
+    margin-top: -30px;
+    padding-top: 30px;
     background-color: #ccc; }
   #mac-section .nav-tabs > li > a {
     margin-top: -10px; }
@@ -307,14 +320,15 @@ header {
     margin-right: 10%;
     margin-bottom: 20px;
     padding: 10px;
-    box-shadow: -1px 1px 10px 2px #8ecbfa;
+    box-shadow: -1px 1px 10px 2px #969696;
+    border-radius: 8px;
     /* ie fallbacks */
-    background-image: url("../assets/background_pattern.jpg");
+    background-image: url("/assets/background_pattern.jpg");
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale')";
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale');
     /* desired styles */
-    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/background_pattern.jpg");
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/background_pattern.jpg");
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/background_pattern.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/background_pattern.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover; }
@@ -338,8 +352,7 @@ header {
       padding-top: 5px;
       padding-bottom: 5px;
       letter-spacing: 1px;
-      margin-top: 5px;
-      margin-bottom: 5px;
+      margin-top: 25px;
       border: solid #ddd 2px; }
 
 @media (max-width: 992px) {
@@ -348,21 +361,20 @@ header {
     #mac-section #mac-img-container {
       height: 250px;
       /* ie fallbacks */
-      background-image: url("../assets/background_mac.jpg");
+      background-image: url("/assets/background_mac.jpg");
       -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_mac.jpg', sizingMethod='scale')";
       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_mac.jpg', sizingMethod='scale');
       /* desired styles */
-      background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/background_mac.jpg");
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/background_mac.jpg");
+      background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/background_mac.jpg");
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/background_mac.jpg");
       background-repeat: no-repeat;
-      background-position: center center;
       background-size: cover; }
     #mac-section .call-to-action button {
       width: 45%;
       padding-top: 8px;
       padding-bottom: 8px;
-      margin-left: 5px;
-      margin-right: 5px; }
+      margin: 5px;
+      margin-bottom: 15px; }
     #mac-section .call-to-action .col-md-3 {
       text-align: center; } }
 
@@ -399,7 +411,7 @@ header {
 #team-section {
   margin-bottom: 30px; }
   #team-section #team-nav {
-    padding-top: 60px;
+    padding-top: 20px;
     background: -webkit-linear-gradient(bottom, rgba(200, 200, 200, 0.3), transparent);
     background: linear-gradient(to top, rgba(200, 200, 200, 0.3), transparent); }
     #team-section #team-nav ul {
@@ -429,7 +441,7 @@ header {
     margin-top: 30px; }
   #team-section .tab-img {
     width: 100%;
-    background-image: url("../assets/tab_backgroundgradient.png"); }
+    background-image: url("/assets/tab_backgroundgradient.png"); }
   #team-section #team-main-image {
     position: relative;
     top: -10px;
@@ -437,8 +449,8 @@ header {
     margin-top: 10px; }
   #team-section .nav-tabs > li.active > a, #team-section .nav-tabs > li.active > a:focus, #team-section .nav-tabs > li.active > a:hover {
     border: 1px solid transparent;
-    margin-top: -60px;
-    padding-top: 60px; }
+    margin-top: -30px;
+    padding-top: 30px; }
   #team-section .nav-tabs > li > a {
     margin-top: -10px; }
   #team-section .col-md-4 {
@@ -474,12 +486,12 @@ header {
   padding-top: 30px;
   padding-bottom: 30px;
   /* ie fallbacks */
-  background-image: url("../assets/background_pattern.jpg");
+  background-image: url("/assets/background_pattern.jpg");
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale')";
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale');
   /* desired styles */
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/background_pattern.jpg");
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/background_pattern.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/background_pattern.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/background_pattern.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
@@ -571,3 +583,5 @@ footer {
   footer #qsr-logo {
     float: right;
     max-width: 90px; }
+  footer a {
+    color: #333; }

@@ -1,43 +1,618 @@
-<section class="container" id="mac-section">
-    <div class="col-md-4">
-      
-    </div>
-    <div class="col-md-8">
-      <h2>
-        <span>NVIVO</span><br/>
-        FOR MAC
-      </h2>
-      <p>
-        The new version of NVivo for Mac is a native Mac application that allows you to work with qualitative content from documents, PDFs, audio, video, datasets, web pages, images and social media. it provides the ability to organize, analyze and explore data using queries and visualizations so insights can be uncovered faster, while using a familiar Mac interface.
-      </p>
-      <div class="row">
-        <div class="col-md-9">
-          <p>
-            <strong>Get started with NVivo for Mac now</strong>
-            and you'll receive the new version at no extra cost as soo as it's available!<br/>
-            <small>Terms & conditions</small>
-          </p>
-        </div>
-        <div class="col-md-3">
-          <button>BUY NOW</button>
-        </div>
-      </div>
 
-      <p>or <strong>register your interest</strong> and we'll keep you up-to-date with release details</p>
-    </div>
-  </section>
+        <link rel="stylesheet" type="text/css" href="https://www.qsrinternational.com/assets/landing-pages/styles.css" />   <script type="text/javascript" src="https://www.qsrinternational.com/assets/landing-pages/jquery-1.4.2.pack.js"></script>   <script type="text/javascript" src="https://www.qsrinternational.com/assets/landing-pages/cufon-yui.js"></script>   <script type="text/javascript" src="https://www.qsrinternational.com/assets/landing-pages/cufon.Gotham_325.font.js"></script>   <script type="text/javascript" src="https://www.qsrinternational.com/assets/landing-pages/cufon.GothamMedium_500.font.js"></script>   <script type="text/javascript" src="https://www.qsrinternational.com/assets/landing-pages/flashobject.js"></script>   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>   <script type="text/javascript">
+  Cufon.replace
+    ('#fontChanger h1, .convert_cufon', { fontFamily: 'Gotham' })
+    ('#fontChanger1 h2, .convert_cufon', { fontFamily: 'Gotham' })
+    ('#banner h1, #secondlevel_banner_onepane h1, #secondlevel_banner_twopane h1', { fontFamily: 'Gotham' })
+    ('#firstlevel_banner .r .c h3', { textShadow: "0 1px #00659e", fontFamily: 'Gotham' })
+    ('#navigation a', { fontFamily: 'GothamMedium', hover: true })
+  ;
+  if (self.location.href.indexOf('other-languages')<1)
+  {
+    Cufon.replace
+      ('p.intro', { fontFamily: 'Gotham' })
+      ('#secondlevel_content .m .m_int h2', { fontFamily: 'Gotham' })
+      ('#secondlevel2pane_content .r .r_int h2', { fontFamily: 'Gotham' })
+      ('.newquote', { fontFamily: 'Gotham' })
+      ('#producttutorial h3, #producttutorial p', { fontFamily: 'Gotham' })
+    ;
+  }
+</script> <script type="text/javascript">
+  function getQueryVariable(variable) { 
+     var query = window.location.search.substring(1); 
+     var vars = query.split("&"); 
+     for (var i=0;i<vars.length;i++) { 
+     var pair = vars[i].split("="); 
+     if (pair[0] == variable) { 
+       return pair[1]; 
+     }
+   } 
+ }
+ function onLoad() {
+    var value = getQueryVariable("utm_source");
+    var e = document.getElementById('Source');
+    e.value = value;
+ }
+ </script>  <script type='text/javascript'>//<![CDATA[ 
 
-  <section class="container" id="teams-section">
-    <div class="col-md-8">
-      <h2>
-        <span>NVIVO</span><br/>
-        FOR TEAMS
-      </h2>
-      <p>
-        Combine the powerful data analysis tools of NVivo 11 for Windows with NVivo for Teams, and take advantage of sophisticated multi user and data management capabilities. Your team can make informed decisions faster with effortless collaboration, streamlined project administration and the ability to work with larger volumes of data using the only available premise collaboration solution.
-      </p>
-    </div>
-    <div class="col-md-4">
+  jQuery.fn.filterOn = function(selection, values) {
+        return this.each(function() {
+            var select = this;
+            var options = [];
+            $(select).find('option').each(function() {
+                options.push({value: $(this).val(), text: $(this).text()});
+            });
+            $(select).data('options', options);
+            $(selection).change(function(){
+        $(selection + " option:selected").each(function(){
+          var options = $(select).empty().data('options');
+          var haystack = values[$(this).attr('id')];    
+          $.each(options, function(i){
+            var option = options[i];
+            if($.inArray(option.value, haystack) !== -1) {
+                        $(select).append(
+                        $('<option>').text(option.text).val(option.value)
+                        );
+                    }
+          });
+        });
+      });
+        });
+    };
+  
+$(document).ready(function(){
+  $(function() {
+        $('#theOptions').filterOn('#dropDown', {
+            'Commercial': ['','Director','Manager - Department','Manager - Research Project','Researcher/Analyst','Human Resources','IT Administrator','Marketing/PR/Communications','Principal Investigator','Project Coordinator','Procurement','Other'],
+            'Education': ['','Student - Undergraduate','Student - Post Graduate','Researcher', 'School/Faculty Administration', 'Head of Department', 'Teacher/Professor','Technical/Research Librarian','IT Services','Business Administration','Other'],
+      'Government': ['','Director','Manager - Department','Manager - Research Project','Researcher/Analyst','Human Resources','IT Administrator','Marketing/PR/Communications','Principal Investigator','Project Coordinator','Procurement','Social Services','Other'],
+      'Health': ['','Services Director','Manager - Research Project','Manager - Department','Researcher/Analyst','Clinician','Clinician - Lead','Human Resources','IT Administrator','Marketing/PR/Communications','Principal Investigator','Project Coordinator','Procurement','Other'], 
+      'Not for profit': ['','Director','Manager - Department','Manager - Research Project','Researcher/Analyst','Human Resources','IT Administrator','Marketing/PR/Communications','Principal Investigator','Project Coordinator','Procurement','Other'],
+      'Other': [''],
+      'null-industry': ['']     
+        });
+  });
+  }); 
+  
+  
+$(document).ready(function(){
+  $(function() {
+        $('#theOptionsState').filterOn('#dropDownCountry', {
+            'Australia':['','Australian Capital Territory','New South Wales','Northern Territory','Queensland','South Australia','Tasmania','Victoria','Western Australia'],
+     'Canada': ['','Alberta','British Columbia','Manitoba','New Brunswick','Newfoundland and Labrador','Northwest Territories','Nova Scotia','Nunavut','Ontario','Prince Edward Island','Quebec', 'Saskatchewan', 'Yukon Territory'],
+    'USA': ['','Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Florida','Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming'],
+          'otherCountry': [''],
+      'null-industry': ['null-industry']      
+        });
+  });
+  });
+
+</script>  <script type="text/javascript">
+$(document).ready(function() {
+  $('#form-btw').hide(); //hide field on start
+  $('#form-btw-other').hide(); //hide field on start  
+ 
+  $('#dropDown').change(function() {
+ 
+   var $index = $('#dropDown').index(this);
+ 
+   if($('#dropDown').val() != 'null-industry') { //if this value is NOT selected
+  $('#form-btw').show(); //this field is hidden
+  $('#form-btw-other').hide(); //hide field on start     
+   } 
+   else {
+   $('#form-btw').hide();//else it is shown
+   }
+   
+   if($('#dropDown').val() == 'Other') { //if this value is  selected
+   $('#form-btw').hide(); //this field is hidden
+   $('#form-btw-other').show(); //this field is shown
+   }  
+   
+   if($('#dropDown').val() == '') { //if this value is selected
+   $('#form-btw').hide(); //this field is hidden
+   $('#form-btw-other').hide(); //this field is hidden
+   }    
+        });
+ });
+ </script><script type="text/javascript">
+$(document).ready(function() {
+  $('#form-state').hide(); //hide field on start
+    
+ 
+  $('#dropDownCountry').change(function() {
+ 
+   var $index = $('#dropDownCountry').index(this);
+ 
+  if($('#dropDownCountry').val() == 'null-industry') { //if this value is  selected
+   $('#form-state').hide(); //this field is hidden
+   
+   }     
+  if($('#dropDownCountry').val() == 'Canada' || $('#dropDownCountry').val() == 'USA' || $('#dropDownCountry').val() == 'Australia')  
+   { $('#form-state').show();} 
+   else
+   { $('#form-state').hide();}
+  
+   
+        });
+ });
+
+function showState()
+ {
+  if($('#dropDownCountry').val() == 'Canada' || $('#dropDownCountry').val() == 'USA' || $('#dropDownCountry').val() == 'Australia')  
+   { $('#form-state').show();} 
+   else
+   {$('#form-state').hide();$('#form-state').val("");}  
+ }
+ </script>  <script type="text/javascript" charset="utf-8">
+
+       
+
+$(document).ready(function(){
+  $(function() {
+
+var ss = "newnvivo [EN]"; 
+var dd = $.datepicker.formatDate('mm/dd/yy', new Date());
+
+
+$('input[name=sitename]').val(ss);
+$('input[name=hiddendate]').val(dd);
+
+ 
+});
+});    
       
-    </div>
-  </section>
+    </script>  <style type="text/css">
+
+.regformtable input {width: 175px;}
+.regformtable select  {width:   175px;}
+
+</style>
+    <META name="leadSource" content="newNVivo [EN]"></head>
+    <body xmlns="">
+        <form action="/newnvivo/reg?vs=NDY5OWU3MGEtMzFkZS00ZjVjLTg2ZWItZTQ1MjQ5OWEyMGZkOzsS1" method="post">
+            <table cellspacing="0" cellpadding="0" border="0" class="regformtable" style="width: 300px;">
+                <tbody>
+                    <tr valign="top">
+                        <td align="right" style="width: 50px"><label for="jldujhl-jldujhl">Email address: <span class="mandatory">*</span></label></td>
+                        <td><input type="text" id="EmailAddress" name="Email" value="" /></td>
+                    </tr>
+                    <!-- <tr valign="top">
+                        <td align="right" style="width: 50px"><label for="name">First name: <span class="mandatory">*</span></label></td>
+                        <td><input type="text" id="FirstName" name="Firstname" /></td>
+                    </tr>
+                    <tr>
+                        <td align="right" style="width: 50px"><label for="Last name">Last name: <span class="mandatory">*</span></label></td>
+                        <td><input type="text" id="LastName" name="Lastname" /></td>
+                    </tr> -->
+                    <tr>
+                        <td valign="top" align="right"><label for="Country">Country: <span class="mandatory">*</span></label></td>
+                        <td><select onfocus="showState()" name="Country" id="dropDownCountry"> <script>$("#dropDownCountry").val(" ");</script>
+                        <option  value="" id="null-industry" selected></option>
+                        <option value="USA" id="USA" >US</option>
+                        <option value="UK" id="otherCountry" >UK</option>
+                        <option value="Canada" id="Canada" >Canada</option>
+                        <option value="Australia" id="Australia" >Australia</option>
+                        <option disabled="disabled" value="" selected>- - - - - -</option>
+                        <option value="Afghanistan" id="otherCountry" >Afghanistan</option>
+                        <option value="Albania" id="otherCountry" >Albania</option>
+                        <option value="Algeria" id="otherCountry" >Algeria</option>
+                        <option value="Andorra" id="otherCountry" >Andorra</option>
+                        <option value="Angola" id="otherCountry" >Angola</option>
+                        <option value="Anguilla" id="otherCountry" >Anguilla</option>
+                        <option value="Antigua and Barbuda" id="otherCountry" >Antigua and Barbuda</option>
+                        <option value="Argentina" id="otherCountry" >Argentina</option>
+                        <option value="Armenia" id="otherCountry" >Armenia</option>
+                        <option value="Aruba" id="otherCountry" >Aruba</option>
+                        <option value="Austria" id="otherCountry" >Austria</option>
+                        <option value="Azerbaijan" id="otherCountry" >Azerbaijan</option>
+                        <option value="Bahamas" id="otherCountry" >Bahamas</option>
+                        <option value="Bahrain" id="otherCountry" >Bahrain</option>
+                        <option value="Bangladesh" id="otherCountry" >Bangladesh</option>
+                        <option value="Barbados" id="otherCountry" >Barbados</option>
+                        <option value="Belarus" id="otherCountry" >Belarus</option>
+                        <option value="Belgium" id="otherCountry" >Belgium</option>
+                        <option value="Belize" id="otherCountry" >Belize</option>
+                        <option value="Benin" id="otherCountry" >Benin</option>
+                        <option value="Bermuda" id="otherCountry" >Bermuda</option>
+                        <option value="Bhutan" id="otherCountry" >Bhutan</option>
+                        <option value="Bolivia" id="otherCountry" >Bolivia</option>
+                        <option value="Bosnia and Herzegovina" id="otherCountry" >Bosnia and Herzegovina</option>
+                        <option value="Botswana" id="otherCountry" >Botswana</option>
+                        <option value="Brazil" id="otherCountry" >Brazil</option>
+                        <option value="Brunei" id="otherCountry" >Brunei</option>
+                        <option value="Bulgaria" id="otherCountry" >Bulgaria</option>
+                        <option value="Burkina Faso" id="otherCountry" >Burkina Faso</option>
+                        <option value="Burundi" id="otherCountry" >Burundi</option>
+                        <option value="Cambodia" id="otherCountry" >Cambodia</option>
+                        <option value="Cameroon" id="otherCountry" >Cameroon</option>
+                        <option value="Cape Verde Islands" id="otherCountry" >Cape Verde Islands</option>
+                        <option value="Cayman Islands" id="otherCountry" >Cayman Islands</option>
+                        <option value="Central African Republic" id="otherCountry" >Central African Republic</option>
+                        <option value="Chad" id="otherCountry" >Chad</option>
+                        <option value="Chile" id="otherCountry" >Chile</option>
+                        <option value="China" id="otherCountry" >China</option>
+                        <option value="Colombia" id="otherCountry" >Colombia</option>
+                        <option value="Comoros" id="otherCountry" >Comoros</option>
+                        <option value="Congo (Democratic Republic)" id="otherCountry" >Congo (Democratic Republic)</option>
+                        <option value="Congo (Republic)" id="otherCountry" >Congo (Republic)</option>
+                        <option value="Cook Islands" id="otherCountry" >Cook Islands</option>
+                        <option value="Costa Rica" id="otherCountry" >Costa Rica</option>
+                        <option value="Croatia" id="otherCountry" >Croatia</option>
+                        <option value="Cuba" id="otherCountry" >Cuba</option>
+                        <option value="Cyprus" id="otherCountry" >Cyprus</option>
+                        <option value="Czech Republic" id="otherCountry" >Czech Republic</option>
+                        <option value="Denmark" id="otherCountry" >Denmark</option>
+                        <option value="Djibouti" id="otherCountry" >Djibouti</option>
+                        <option value="Dominica" id="otherCountry" >Dominica</option>
+                        <option value="Dominican Republic" id="otherCountry" >Dominican Republic</option>
+                        <option value="East Timor" id="otherCountry" >East Timor</option>
+                        <option value="Ecuador" id="otherCountry" >Ecuador</option>
+                        <option value="Egypt" id="otherCountry" >Egypt</option>
+                        <option value="El Salvador" id="otherCountry" >El Salvador</option>
+                        <option value="Equatorial Guinea" id="otherCountry" >Equatorial Guinea</option>
+                        <option value="Eritrea" id="otherCountry" >Eritrea</option>
+                        <option value="Estonia" id="otherCountry" >Estonia</option>
+                        <option value="Ethiopia" id="otherCountry" >Ethiopia</option>
+                        <option value="Falkland Islands" id="otherCountry" >Falkland Islands</option>
+                        <option value="Fiji" id="otherCountry" >Fiji</option>
+                        <option value="Finland" id="otherCountry" >Finland</option>
+                        <option value="France" id="otherCountry" >France</option>
+                        <option value="French Guiana" id="otherCountry" >French Guiana</option>
+                        <option value="French Polynesia" id="otherCountry" >French Polynesia</option>
+                        <option value="Gabon" id="otherCountry" >Gabon</option>
+                        <option value="Gambia" id="otherCountry" >Gambia</option>
+                        <option value="Georgia" id="otherCountry" >Georgia</option>
+                        <option value="Germany" id="otherCountry" >Germany</option>
+                        <option value="Ghana" id="otherCountry" >Ghana</option>
+                        <option value="Gibraltar" id="otherCountry" >Gibraltar</option>
+                        <option value="Greece" id="otherCountry" >Greece</option>
+                        <option value="Greenland" id="otherCountry" >Greenland</option>
+                        <option value="Grenada" id="otherCountry" >Grenada</option>
+                        <option value="Guadeloupe" id="otherCountry" >Guadeloupe</option>
+                        <option value="Guam" id="otherCountry" >Guam</option>
+                        <option value="Guatemala" id="otherCountry" >Guatemala</option>
+                        <option value="Guinea" id="otherCountry" >Guinea</option>
+                        <option value="Guinea-Bissau" id="otherCountry" >Guinea-Bissau</option>
+                        <option value="Guyana" id="otherCountry" >Guyana</option>
+                        <option value="Haiti" id="otherCountry" >Haiti</option>
+                        <option value="Honduras" id="otherCountry" >Honduras</option>
+                        <option value="Hong Kong" id="otherCountry" >Hong Kong</option>
+                        <option value="Hungary" id="otherCountry" >Hungary</option>
+                        <option value="Iceland" id="otherCountry" >Iceland</option>
+                        <option value="India" id="otherCountry" >India</option>
+                        <option value="Indonesia" id="otherCountry" >Indonesia</option>
+                        <option value="Iran" id="otherCountry" >Iran</option>
+                        <option value="Iraq" id="otherCountry" >Iraq</option>
+                        <option value="Ireland" id="otherCountry" >Ireland</option>
+                        <option value="Israel" id="otherCountry" >Israel</option>
+                        <option value="Italy" id="otherCountry" >Italy</option>
+                        <option value="Ivory Coast" id="otherCountry" >Ivory Coast</option>
+                        <option value="Jamaica" id="otherCountry" >Jamaica</option>
+                        <option value="Japan" id="otherCountry" >Japan</option>
+                        <option value="Jordan" id="otherCountry" >Jordan</option>
+                        <option value="Kazakhstan" id="otherCountry" >Kazakhstan</option>
+                        <option value="Kenya" id="otherCountry" >Kenya</option>
+                        <option value="Kiribati" id="otherCountry" >Kiribati</option>
+                        <option value="Kuwait" id="otherCountry" >Kuwait</option>
+                        <option value="Kyrgyzstan" id="otherCountry" >Kyrgyzstan</option>
+                        <option value="Laos" id="otherCountry" >Laos</option>
+                        <option value="Latvia" id="otherCountry" >Latvia</option>
+                        <option value="Lebanon" id="otherCountry" >Lebanon</option>
+                        <option value="Lesotho" id="otherCountry" >Lesotho</option>
+                        <option value="Liberia" id="otherCountry" >Liberia</option>
+                        <option value="Libya" id="otherCountry" >Libya</option>
+                        <option value="Liechtenstein" id="otherCountry" >Liechtenstein</option>
+                        <option value="Lithuania" id="otherCountry" >Lithuania</option>
+                        <option value="Luxembourg" id="otherCountry" >Luxembourg</option>
+                        <option value="Macau" id="otherCountry" >Macau</option>
+                        <option value="Macedonia" id="otherCountry" >Macedonia</option>
+                        <option value="Madagascar" id="otherCountry" >Madagascar</option>
+                        <option value="Malawi" id="otherCountry" >Malawi</option>
+                        <option value="Malaysia" id="otherCountry" >Malaysia</option>
+                        <option value="Maldives" id="otherCountry" >Maldives</option>
+                        <option value="Mali" id="otherCountry" >Mali</option>
+                        <option value="Malta" id="otherCountry" >Malta</option>
+                        <option value="Marshall Islands" id="otherCountry" >Marshall Islands</option>
+                        <option value="Martinique" id="otherCountry" >Martinique</option>
+                        <option value="Mauritania" id="otherCountry" >Mauritania</option>
+                        <option value="Mauritius" id="otherCountry" >Mauritius</option>
+                        <option value="Mayotte" id="otherCountry" >Mayotte</option>
+                        <option value="Mexico" id="otherCountry" >Mexico</option>
+                        <option value="Micronesia" id="otherCountry" >Micronesia</option>
+                        <option value="Moldova" id="otherCountry" >Moldova</option>
+                        <option value="Monaco" id="otherCountry" >Monaco</option>
+                        <option value="Mongolia" id="otherCountry" >Mongolia</option>
+                        <option value="Montserrat" id="otherCountry" >Montserrat</option>
+                        <option value="Morocco" id="otherCountry" >Morocco</option>
+                        <option value="Mozambique" id="otherCountry" >Mozambique</option>
+                        <option value="Myanmar (Burma)" id="otherCountry" >Myanmar (Burma)</option>
+                        <option value="Namibia" id="otherCountry" >Namibia</option>
+                        <option value="Nauru" id="otherCountry" >Nauru</option>
+                        <option value="Nepal" id="otherCountry" >Nepal</option>
+                        <option value="Netherlands" id="otherCountry" >Netherlands</option>
+                        <option value="Netherlands Antilles" id="otherCountry" >Netherlands Antilles</option>
+                        <option value="New Caledonia" id="otherCountry" >New Caledonia</option>
+                        <option value="New Zealand" id="otherCountry" >New Zealand</option>
+                        <option value="Nicaragua" id="otherCountry" >Nicaragua</option>
+                        <option value="Niger" id="otherCountry" >Niger</option>
+                        <option value="Nigeria" id="otherCountry" >Nigeria</option>
+                        <option value="Niue" id="otherCountry" >Niue</option>
+                        <option value="North Korea" id="otherCountry" >North Korea</option>
+                        <option value="Northern Mariana Islands" id="otherCountry" >Northern Mariana Islands</option>
+                        <option value="Norway" id="otherCountry" >Norway</option>
+                        <option value="Oman" id="otherCountry" >Oman</option>
+                        <option value="Pakistan" id="otherCountry" >Pakistan</option>
+                        <option value="Palau" id="otherCountry" >Palau</option>
+                        <option value="Palestine" id="otherCountry" >Palestine</option>
+                        <option value="Panama" id="otherCountry" >Panama</option>
+                        <option value="Papua New Guinea" id="otherCountry" >Papua New Guinea</option>
+                        <option value="Paraguay" id="otherCountry" >Paraguay</option>
+                        <option value="Peru" id="otherCountry" >Peru</option>
+                        <option value="Philippines" id="otherCountry" >Philippines</option>
+                        <option value="Pitcairn Islands" id="otherCountry" >Pitcairn Islands</option>
+                        <option value="Poland" id="otherCountry" >Poland</option>
+                        <option value="Portugal" id="otherCountry" >Portugal</option>
+                        <option value="Puerto Rico" id="otherCountry" >Puerto Rico</option>
+                        <option value="Qatar" id="otherCountry" >Qatar</option>
+                        <option value="Reunion" id="otherCountry" >Reunion</option>
+                        <option value="Romania" id="otherCountry" >Romania</option>
+                        <option value="Russia" id="otherCountry" >Russia</option>
+                        <option value="Rwanda" id="otherCountry" >Rwanda</option>
+                        <option value="Samoa (American)" id="otherCountry" >Samoa (American)</option>
+                        <option value="Samoa (Western)" id="otherCountry" >Samoa (Western)</option>
+                        <option value="San Marino" id="otherCountry" >San Marino</option>
+                        <option value="Sao Tome and Principe" id="otherCountry" >Sao Tome and Principe</option>
+                        <option value="Saudi Arabia" id="otherCountry" >Saudi Arabia</option>
+                        <option value="Senegal" id="otherCountry" >Senegal</option>
+                        <option value="Serbia and Montenegro" id="otherCountry" >Serbia and Montenegro</option>
+                        <option value="Seychelles" id="otherCountry" >Seychelles</option>
+                        <option value="Sierra Leone" id="otherCountry" >Sierra Leone</option>
+                        <option value="Singapore" id="otherCountry" >Singapore</option>
+                        <option value="Slovakia" id="otherCountry" >Slovakia</option>
+                        <option value="Slovenia" id="otherCountry" >Slovenia</option>
+                        <option value="Solomon Islands" id="otherCountry" >Solomon Islands</option>
+                        <option value="Somalia" id="otherCountry" >Somalia</option>
+                        <option value="South Africa" id="otherCountry" >South Africa</option>
+                        <option value="South Georgia" id="otherCountry" >South Georgia</option>
+                        <option value="South Korea" id="otherCountry" >South Korea</option>
+                        <option value="Spain" id="otherCountry" >Spain</option>
+                        <option value="Sri Lanka" id="otherCountry" >Sri Lanka</option>
+                        <option value="St Helena" id="otherCountry" >St Helena</option>
+                        <option value="St Kitts and Nevis" id="otherCountry" >St Kitts and Nevis</option>
+                        <option value="St Lucia" id="otherCountry" >St Lucia</option>
+                        <option value="St Pierre and Miquelon" id="otherCountry" >St Pierre and Miquelon</option>
+                        <option value="St Vincent and the Grenadines" id="otherCountry" >St Vincent and the Grenadines</option>
+                        <option value="Sudan" id="otherCountry" >Sudan</option>
+                        <option value="Suriname" id="otherCountry" >Suriname</option>
+                        <option value="Swaziland" id="otherCountry" >Swaziland</option>
+                        <option value="Sweden" id="otherCountry" >Sweden</option>
+                        <option value="Switzerland" id="otherCountry" >Switzerland</option>
+                        <option value="Syria" id="otherCountry" >Syria</option>
+                        <option value="Taiwan" id="otherCountry" >Taiwan</option>
+                        <option value="Tajikistan" id="otherCountry" >Tajikistan</option>
+                        <option value="Tanzania" id="otherCountry" >Tanzania</option>
+                        <option value="Thailand" id="otherCountry" >Thailand</option>
+                        <option value="Togo" id="otherCountry" >Togo</option>
+                        <option value="Tokelau" id="otherCountry" >Tokelau</option>
+                        <option value="Tonga" id="otherCountry" >Tonga</option>
+                        <option value="Trinidad and Tobago" id="otherCountry" >Trinidad and Tobago</option>
+                        <option value="Tunisia" id="otherCountry" >Tunisia</option>
+                        <option value="Turkey" id="otherCountry" >Turkey</option>
+                        <option value="Turkmenistan" id="otherCountry" >Turkmenistan</option>
+                        <option value="Turks and Caicos Islands" id="otherCountry" >Turks and Caicos Islands</option>
+                        <option value="Tuvalu" id="otherCountry" >Tuvalu</option>
+                        <option value="Uganda" id="otherCountry" >Uganda</option>
+                        <option value="Ukraine" id="otherCountry" >Ukraine</option>
+                        <option value="United Arab Emirates" id="otherCountry" >United Arab Emirates</option>
+                        <option value="Uruguay" id="otherCountry" >Uruguay</option>
+                        <option value="Uzbekistan" id="otherCountry" >Uzbekistan</option>
+                        <option value="Vanuatu" id="otherCountry" >Vanuatu</option>
+                        <option value="Vatican City" id="otherCountry" >Vatican City</option>
+                        <option value="Venezuela" id="otherCountry" >Venezuela</option>
+                        <option value="Vietnam" id="otherCountry" >Vietnam</option>
+                        <option value="Virgin Islands (British)" id="otherCountry" >Virgin Islands (British)</option>
+                        <option value="Virgin Islands (US)" id="otherCountry" >Virgin Islands (US)</option>
+                        <option value="Wallis and Futuna" id="otherCountry" >Wallis and Futuna</option>
+                        <option value="Western Sahara" id="otherCountry" >Western Sahara</option>
+                        <option value="Yemen" id="otherCountry" >Yemen</option>
+                        <option value="Zambia" id="otherCountry" >Zambia</option>
+                        <option value="Zimbabwe" id="otherCountry" >Zimbabwe</option>
+                        </select>
+                        <div id="form-state">
+                        <p style="padding-bottom: 5px; padding-left: 5px; padding-right: 5px; color: #76787b; padding-top: 12px">Which state / province?<span class="mandatory">*</span></p>
+                        <select name="State" id="theOptionsState">
+                        <option  value="" id="null-industry" selected></option>
+                        <option value="Australian Capital Territory" >Australian Capital Territory</option>
+                        <option value="New South Wales" >New South Wales</option>
+                        <option value="Northern Territory" >Northern Territory</option>
+                        <option value="Queensland" >Queensland</option>
+                        <option value="South Australia" >South Australia</option>
+                        <option value="Tasmania" >Tasmania</option>
+                        <option value="Victoria" >Victoria</option>
+                        <option value="Western Australia" >Western Australia</option>
+                        <option value="Alberta" >Alberta</option>
+                        <option value="British Columbia" >British Columbia</option>
+                        <option value="Manitoba" >Manitoba</option>
+                        <option value="New Brunswick" >New Brunswick</option>
+                        <option value="Newfoundland and Labrador" >Newfoundland and Labrador</option>
+                        <option value="Northwest Territories" >Northwest Territories</option>
+                        <option value="Nova Scotia" >Nova Scotia</option>
+                        <option value="Nunavut" >Nunavut</option>
+                        <option value="Ontario" >Ontario</option>
+                        <option value="Prince Edward Island" >Prince Edward Island</option>
+                        <option value="Quebec" >Quebec</option>
+                        <option value="Saskatchewan" >Saskatchewan</option>
+                        <option value="Yukon Territory" >Yukon Territory</option>
+                        <option value="Alabama" >Alabama</option>
+                        <option value="Alaska" >Alaska</option>
+                        <option value="Arizona" >Arizona</option>
+                        <option value="Arkansas" >Arkansas</option>
+                        <option value="California" >California</option>
+                        <option value="Colorado" >Colorado</option>
+                        <option value="Connecticut" >Connecticut</option>
+                        <option value="Delaware" >Delaware</option>
+                        <option value="District of Columbia" >District of Columbia</option>
+                        <option value="Florida" >Florida</option>
+                        <option value="Georgia" >Georgia</option>
+                        <option value="Hawaii" >Hawaii</option>
+                        <option value="Idaho" >Idaho</option>
+                        <option value="Illinois" >Illinois</option>
+                        <option value="Indiana" >Indiana</option>
+                        <option value="Iowa" >Iowa</option>
+                        <option value="Kansas" >Kansas</option>
+                        <option value="Kentucky" >Kentucky</option>
+                        <option value="Louisiana" >Louisiana</option>
+                        <option value="Maine" >Maine</option>
+                        <option value="Maryland" >Maryland</option>
+                        <option value="Massachusetts" >Massachusetts</option>
+                        <option value="Michigan" >Michigan</option>
+                        <option value="Minnesota" >Minnesota</option>
+                        <option value="Mississippi" >Mississippi</option>
+                        <option value="Missouri" >Missouri</option>
+                        <option value="Montana" >Montana</option>
+                        <option value="Nebraska" >Nebraska</option>
+                        <option value="Nevada" >Nevada</option>
+                        <option value="New Hampshire" >New Hampshire</option>
+                        <option value="New Jersey" >New Jersey</option>
+                        <option value="New Mexico" >New Mexico</option>
+                        <option value="New York" >New York</option>
+                        <option value="North Carolina" >North Carolina</option>
+                        <option value="North Dakota" >North Dakota</option>
+                        <option value="Ohio" >Ohio</option>
+                        <option value="Oklahoma" >Oklahoma</option>
+                        <option value="Oregon" >Oregon</option>
+                        <option value="Pennsylvania" >Pennsylvania</option>
+                        <option value="Rhode Island" >Rhode Island</option>
+                        <option value="South Carolina" >South Carolina</option>
+                        <option value="South Dakota" >South Dakota</option>
+                        <option value="Tennessee" >Tennessee</option>
+                        <option value="Texas" >Texas</option>
+                        <option value="Utah" >Utah</option>
+                        <option value="Vermont" >Vermont</option>
+                        <option value="Virginia" >Virginia</option>
+                        <option value="Washington" >Washington</option>
+                        <option value="West Virginia" >West Virginia</option>
+                        <option value="Wisconsin" >Wisconsin</option>
+                        <option value="Wyoming" >Wyoming</option>
+                        </select></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top" align="right" style="width: 140px"><label for="Industry">Sector: <span class="mandatory">*</span></label></td>
+                        <td style="width: 250px"><select name="Industry" id="dropDown">
+                        <option value="" id="null-industry" selected></option>
+                        <option value="Commercial" id="Commercial" >Commercial</option>
+                        <option value="Education" id="Education" >Education</option>
+                        <option value="Government" id="Government" >Government</option>
+                        <option value="Health" id="Health" >Health</option>
+                        <option value="Not for profit" id="Not for profit" >Not for profit</option>
+                        <option value="Other" id="Other" >Other</option>
+                        </select>
+                        <div id="form-btw">
+                        <p style="padding-bottom: 5px; padding-left: 5px; padding-right: 5px; color: #76787b; padding-top: 12px">What is your role? <span class="mandatory">*</span></p>
+                        <select name="SubIndustry" id="theOptions">
+                        <option value="" selected></option>
+                        <option value="Business Administration" >Business Administration</option>
+                        <option value="Clinician" >Clinician</option>
+                        <option value="Clinician - Lead" >Clinician - Lead</option>
+                        <option value="Director" >Director</option>
+                        <option value="Head of Department" >Head of Department</option>
+                        <option value="Human Resources" >Human Resources</option>
+                        <option value="IT Administrator" >IT Administrator</option>
+                        <option value="IT Services" >IT Services</option>
+                        <option value="Manager - Department" >Manager - Department</option>
+                        <option value="Manager - Research Project" >Manager - Research Project</option>
+                        <option value="Marketing/PR/Communications" >Marketing/PR/Communications</option>
+                        <option value="Principal Investigator" >Principal Investigator</option>
+                        <option value="Procurement" >Procurement</option>
+                        <option value="Project Coordinator" >Project Coordinator</option>
+                        <option value="Researcher" >Researcher</option>
+                        <option value="Researcher/Analyst" >Researcher/Analyst</option>
+                        <option value="School/Faculty Administration" >School/Faculty Administration</option>
+                        <option value="Services Director" >Services Director</option>
+                        <option value="Social Services" >Social Services</option>
+                        <option value="Student - Post Graduate" >Student - Post Graduate</option>
+                        <option value="Student - Undergraduate" >Student - Undergraduate</option>
+                        <option value="Teacher/Professor" >Teacher/Professor</option>
+                        <option value="Technical/Research Librarian" >Technical/Research Librarian</option>
+                        <option value="Other" >Other</option>
+                        </select></div>
+                        <div id="form-btw-other">
+                        <p style="padding-bottom: 5px; padding-left: 5px; padding-right: 5px; color: #76787b; padding-top: 12px">Describe your industry: <span class="mandatory">*</span></p>
+                        <input type="text" name="IndustryOther" id="IndustryOther" value="" /></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label for="Organization">Organization: <span class="mandatory">*</span></label></td>
+                        <td><input type="text" id="Org" name="Organization" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label for="JobTitle">Job Title: </label></td>
+                        <td><input type="text" id="JobTitle" name="Jobtitle" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td align="right"><label for="Iminterestedin">I'm interested in: </label></td>
+                        <td>
+                        <p><input type="checkbox" name="InterestedIn" value="NVivo 11 for Windows" style="width:30px;margin:10px 0px;"  />NVivo 11 for Windows<br />
+                        <input type="checkbox" name="InterestedIn" value="NVivo for Mac" style="width:30px;margin:10px 0px;"  />NVivo for Mac<br />
+                        <input type="checkbox" name="InterestedIn" value="NVivo for Teams" style="width:30px;margin:10px 0px;"  />NVivo for Teams</p>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td>&nbsp;</td>
+                        <td><input type="image" id="submitImage" value="Subscribe" style="border-bottom: #ffffff 0px solid; border-left: #ffffff 0px solid; padding-left: 2px; width: 69px; height: 22px; border-top: #ffffff 0px solid; border-right: #ffffff 0px solid" src="https://www.qsrinternational.com/assets/but_submit.gif" class="button" /></td>
+                        <script>
+
+$("#submitImage").click(function() {
+
+     if ($('#EmailAddress').val() == '')
+     {alert ("Please enter your email address");
+     return false;}
+    
+     if ($('#dropDownCountry').val() == '' || $('#dropDownCountry').val() == 'null-industry')
+     {alert ("Please select your country");
+     return false;}
+
+     
+
+ if($('#dropDownCountry').val() == 'Canada' || $('#dropDownCountry').val() == 'USA' || $('#dropDownCountry').val() == 'Australia') 
+  {
+         if ($('#theOptionsState').val() == '')
+     {alert ("Please select your state / province");
+     return false;}
+     }
+     
+     if ($('#dropDown').val() == '')
+     {alert ("Please select your industry");
+     return false;}
+     
+     if ($('#dropDown').val() == 'Other')
+     {
+     if ($('#IndustryOther').val() == '')
+     {alert ("Please describe your industry");
+     return false;}
+     }
+     
+     if ($('#dropDown').val() != 'Other' && $('#dropDown').val() != '')
+     {
+     if ($('#theOptions').val() == '')
+     {alert ("Please select your role");
+     return false;}
+     }
+    
+    if ($('#Org').val() == '')
+     {alert ("Please enter the name of the organization you work for");
+     return false;}
+
+
+     
+});
+</script>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="hidden" id="sitename" name="sitename" value="" /> <input type="hidden" id="hiddendate" name="hiddendate" value="" />
+        </form>
+    </body>
+</html>

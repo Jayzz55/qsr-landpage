@@ -19,12 +19,12 @@ header {
     color: #fff;
   }
   /* ie fallbacks */
-  background-image: url('../assets/header_phase1.jpg');
+  background-image: url('/assets/header_phase1.jpg');
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/header_phase1.jpg', sizingMethod='scale')";
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/header_phase1.jpg', sizingMethod='scale');
 
   /* desired styles */
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../assets/header_phase1.jpg');
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/assets/header_phase1.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -34,11 +34,11 @@ header {
 #lead-section{
   color: #ddd;
   /* ie fallbacks */
-  background-image: url('../assets/background_pattern.jpg');
+  background-image: url('/assets/background_pattern.jpg');
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale')";
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale');
   /* desired styles */
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../assets/background_pattern.jpg');
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/assets/background_pattern.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -136,7 +136,7 @@ header {
 #windows-section{
   margin-bottom: 30px;
   #windows-nav {
-    padding-top: 60px;
+    padding-top: 30px;
     background: linear-gradient(to top, rgba(200,200,200,0.3), rgba(0,0,0,0));;
     ul {
       margin-left: 20px;
@@ -184,7 +184,7 @@ header {
 
   .tab-img {
     width: 100%;
-    background-image: url('../assets/tab_backgroundgradient.png');
+    background-image: url('/assets/tab_backgroundgradient.png');
   }
 
   #windows-main-image{
@@ -199,6 +199,7 @@ header {
     height: 50px;
     position: relative;
     top: -15px;
+    margin-left: 10px;
   }
 
   #pro-main-image{
@@ -215,8 +216,8 @@ header {
 
   .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
     border: 1px solid transparent;
-    margin-top: -60px;
-    padding-top: 60px;
+    margin-top: -30px;
+    padding-top: 30px;
   }
 
   .nav-tabs>li>a {
@@ -233,6 +234,7 @@ header {
     margin-bottom: 20px;
     padding: 10px;
     box-shadow: -1px 1px 10px 2px rgba(142,203,250,1);
+    border-radius: 8px;
 
     p {
       font-size: 1.2rem;
@@ -249,11 +251,11 @@ header {
     }
 
     /* ie fallbacks */
-    background-image: url('../assets/background_pattern.jpg');
+    background-image: url('/assets/background_pattern.jpg');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale')";
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale');
     /* desired styles */
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../assets/background_pattern.jpg');
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/assets/background_pattern.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -313,8 +315,31 @@ header {
   #windows-section{
     #myTabs>li{
       height: 80px;
-      width: 50%;
     }
+    .tab-text {
+      height: 100px;
+      font-weight: bold;
+      margin-top: 20px;
+      text-align: center;
+    }
+    #windows-text{
+      font-size: 1.1rem;
+      color: rgb(27,95,161);
+    }
+
+    #starter-text{
+      margin-left: -5px;
+      color: rgb(31,236,40);
+    }
+
+    #pro-text{
+      color: rgb(56,107,193);
+    }
+
+    #plus-text{
+      color: rgb(116, 69, 237);
+    }
+
     .tab-img {
       width: 80%;
     }
@@ -325,11 +350,6 @@ header {
       left: -9px;
       top: -5px;
       width: 150px;
-    }
-
-    .nav-tabs > li.bottom-tabs.active > a:focus, .nav-tabs > li.bottom-tabs.active > a:hover, .nav-tabs > li.bottom-tabs.active > a:active, .nav-tabs > li.bottom-tabs.active > a:visited, .nav-tabs > li.bottom-tabs.active > a{
-      margin-top: 0;
-      padding-top: 17px;
     }
 
     #windows-nav {
@@ -352,11 +372,11 @@ header {
   margin-bottom: 30px;
 
   /* ie fallbacks */
-  background-image: url('../assets/background_mac.jpg');
+  background-image: url('/assets/background_mac.jpg');
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_mac.jpg', sizingMethod='scale')";
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_mac.jpg', sizingMethod='scale');
   /* desired styles */
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../assets/background_mac.jpg');
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/assets/background_mac.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -366,12 +386,12 @@ header {
   }
 
   #mac-nav {
-    padding-top: 60px;
+    padding-top: 30px;
     background: linear-gradient(to top, rgba(220,220,220,0.3), rgba(0,0,0,0));;
   }
 
   .register {
-    color: #27f;
+    color: rgb(27,95,161);
     strong {
       text-decoration: underline;
     }
@@ -410,7 +430,7 @@ header {
 
   .tab-img {
     width: 100%;
-    background-image: url('../assets/tab_backgroundgradient.png');
+    background-image: url('/assets/tab_backgroundgradient.png');
   }
 
   #mac-main-image{
@@ -422,8 +442,8 @@ header {
 
   .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
     border: 1px solid transparent;
-    margin-top: -60px;
-    padding-top: 60px;
+    margin-top: -30px;
+    padding-top: 30px;
     background-color: #ccc;
   }
 
@@ -441,7 +461,8 @@ header {
     margin-right: 10%;
     margin-bottom: 20px;
     padding: 10px;
-    box-shadow: -1px 1px 10px 2px rgba(142,203,250,1);
+    box-shadow: -1px 1px 10px 2px rgba(150,150,150,1);
+    border-radius: 8px;
 
     p {
       font-size: 1.2rem;
@@ -458,11 +479,11 @@ header {
     }
 
     /* ie fallbacks */
-    background-image: url('../assets/background_pattern.jpg');
+    background-image: url('/assets/background_pattern.jpg');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale')";
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale');
     /* desired styles */
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../assets/background_pattern.jpg');
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/assets/background_pattern.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -477,8 +498,8 @@ header {
       padding-top: 5px;
       padding-bottom: 5px;
       letter-spacing: 1px;
-      margin-top: 5px;
-      margin-bottom: 5px;
+      margin-top: 25px;
+      // margin-bottom: 5px;
       border: solid #ddd 2px;
     }
   }
@@ -490,13 +511,12 @@ header {
     #mac-img-container {
       height: 250px;
       /* ie fallbacks */
-      background-image: url('../assets/background_mac.jpg');
+      background-image: url('/assets/background_mac.jpg');
       -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_mac.jpg', sizingMethod='scale')";
       filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_mac.jpg', sizingMethod='scale');
       /* desired styles */
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../assets/background_mac.jpg');
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/assets/background_mac.jpg');
       background-repeat: no-repeat;
-      background-position: center center;
       background-size: cover;
     }
 
@@ -505,8 +525,9 @@ header {
         width: 45%;
         padding-top: 8px;
         padding-bottom: 8px;
-        margin-left:5px;
-        margin-right: 5px;
+        margin:5px;
+        margin-bottom: 15px;
+
       }
       .col-md-3{
         text-align: center;
@@ -570,7 +591,7 @@ header {
 #team-section{
   margin-bottom: 30px;
   #team-nav {
-    padding-top: 60px;
+    padding-top: 20px;
     background: linear-gradient(to top, rgba(200,200,200,0.3), rgba(0,0,0,0));;
     ul {
       margin-left: 20px;
@@ -618,7 +639,7 @@ header {
 
   .tab-img {
     width: 100%;
-    background-image: url('../assets/tab_backgroundgradient.png');
+    background-image: url('/assets/tab_backgroundgradient.png');
   }
 
   #team-main-image{
@@ -630,8 +651,8 @@ header {
 
   .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
     border: 1px solid transparent;
-    margin-top: -60px;
-    padding-top: 60px;
+    margin-top: -30px;
+    padding-top: 30px;
   }
 
   .nav-tabs>li>a {
@@ -690,11 +711,11 @@ header {
   padding-top: 30px;
   padding-bottom: 30px;
   /* ie fallbacks */
-  background-image: url('../assets/background_pattern.jpg');
+  background-image: url('/assets/background_pattern.jpg');
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale')";
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale');
   /* desired styles */
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../assets/background_pattern.jpg');
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('/assets/background_pattern.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -835,5 +856,8 @@ footer {
   #qsr-logo {
     float: right;
     max-width: 90px;
+  }
+  a {
+    color: #333;
   }
 }

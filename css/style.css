@@ -4,16 +4,20 @@
   .container {
     width: 80%; } }
 
+@media (min-width: 1200px) {
+  .container {
+    width: 60%; } }
+
 /* HEADER */
 header {
   height: 300px;
   /* ie fallbacks */
-  background-image: url("/assets/header_phase1.jpg");
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/header_phase1.jpg', sizingMethod='scale')";
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/header_phase1.jpg', sizingMethod='scale');
+  background-image: url("../assets/header_phase1.jpg");
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.../assets/header_phase1.jpg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.../assets/header_phase1.jpg', sizingMethod='scale');
   /* desired styles */
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header_phase1.jpg");
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/header_phase1.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/header_phase1.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/header_phase1.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
@@ -28,12 +32,12 @@ header {
 #lead-section {
   color: #ddd;
   /* ie fallbacks */
-  background-image: url("/assets/background_pattern.jpg");
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale')";
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale');
+  background-image: url("../assets/background_pattern.jpg");
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.../assets/background_pattern.jpg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.../assets/background_pattern.jpg', sizingMethod='scale');
   /* desired styles */
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/background_pattern.jpg");
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/background_pattern.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/background_pattern.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/background_pattern.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
@@ -116,9 +120,13 @@ header {
     margin: 0; }
   #windows-section #windows-bg-image {
     width: 100%;
-    float: right; }
+    float: right;
+    max-width: 500px; }
   #windows-section .register {
-    color: #27f; }
+    color: #27f;
+    margin: auto;
+    width: 75%;
+    max-width: 800px; }
     #windows-section .register strong {
       text-decoration: underline; }
   #windows-section #myTabs > li {
@@ -134,7 +142,7 @@ header {
     margin-top: 30px; }
   #windows-section .tab-img {
     width: 100%;
-    background-image: url("/assets/tab_backgroundgradient.png"); }
+    background-image: url("../assets/tab_backgroundgradient.png"); }
   #windows-section #windows-main-image {
     position: relative;
     top: -10px;
@@ -163,19 +171,20 @@ header {
   #windows-section .col-md-4 {
     padding-right: 0; }
   #windows-section .call-to-action {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: auto;
     margin-bottom: 20px;
     padding: 10px;
     box-shadow: -1px 1px 10px 2px #8ecbfa;
     border-radius: 8px;
+    width: 75%;
+    max-width: 800px;
     /* ie fallbacks */
-    background-image: url("/assets/background_pattern.jpg");
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale')";
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale');
+    background-image: url("../assets/background_pattern.jpg");
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.../assets/background_pattern.jpg', sizingMethod='scale')";
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.../assets/background_pattern.jpg', sizingMethod='scale');
     /* desired styles */
-    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/background_pattern.jpg");
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/background_pattern.jpg");
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/background_pattern.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/background_pattern.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover; }
@@ -213,7 +222,9 @@ header {
     margin-left: 5px;
     margin-right: 5px; }
   #windows-section .call-to-action .col-md-3 {
-    text-align: center; } }
+    text-align: center; }
+  #windows-section .nav > li > a:hover {
+    background-color: #fff; } }
 
 @media (min-width: 992px) {
   #windows-section #windows-main-image {
@@ -259,12 +270,12 @@ header {
 #mac-section {
   margin-bottom: 30px;
   /* ie fallbacks */
-  background-image: url("/assets/background_mac.jpg");
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_mac.jpg', sizingMethod='scale')";
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_mac.jpg', sizingMethod='scale');
+  background-image: url("../assets/background_mac.jpg");
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.../assets/background_mac.jpg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.../assets/background_mac.jpg', sizingMethod='scale');
   /* desired styles */
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/background_mac.jpg");
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/background_mac.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/background_mac.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/background_mac.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
@@ -275,7 +286,11 @@ header {
     background: -webkit-linear-gradient(bottom, rgba(220, 220, 220, 0.3), transparent);
     background: linear-gradient(to top, rgba(220, 220, 220, 0.3), transparent); }
   #mac-section .register {
-    color: #1b5fa1; }
+    color: #1b5fa1;
+    margin: auto;
+    width: 75%;
+    max-width: 800px;
+    margin-bottom: 60px; }
     #mac-section .register strong {
       text-decoration: underline; }
   #mac-section .nav-tabs {
@@ -299,7 +314,7 @@ header {
     margin-top: 30px; }
   #mac-section .tab-img {
     width: 100%;
-    background-image: url("/assets/tab_backgroundgradient.png"); }
+    background-image: url("../assets/tab_backgroundgradient.png"); }
   #mac-section #mac-main-image {
     position: relative;
     top: -10px;
@@ -316,19 +331,20 @@ header {
     padding-left: 0;
     padding-right: 0; }
   #mac-section .call-to-action {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: auto;
+    width: 75%;
+    max-width: 800px;
     margin-bottom: 20px;
     padding: 10px;
     box-shadow: -1px 1px 10px 2px #969696;
     border-radius: 8px;
     /* ie fallbacks */
-    background-image: url("/assets/background_pattern.jpg");
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale')";
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale');
+    background-image: url("../assets/background_pattern.jpg");
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.../assets/background_pattern.jpg', sizingMethod='scale')";
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.../assets/background_pattern.jpg', sizingMethod='scale');
     /* desired styles */
-    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/background_pattern.jpg");
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/background_pattern.jpg");
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/background_pattern.jpg");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/background_pattern.jpg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover; }
@@ -361,12 +377,12 @@ header {
     #mac-section #mac-img-container {
       height: 250px;
       /* ie fallbacks */
-      background-image: url("/assets/background_mac.jpg");
-      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_mac.jpg', sizingMethod='scale')";
-      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_mac.jpg', sizingMethod='scale');
+      background-image: url("../assets/background_mac.jpg");
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.../assets/background_mac.jpg', sizingMethod='scale')";
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.../assets/background_mac.jpg', sizingMethod='scale');
       /* desired styles */
-      background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/background_mac.jpg");
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/background_mac.jpg");
+      background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/background_mac.jpg");
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/background_mac.jpg");
       background-repeat: no-repeat;
       background-size: cover; }
     #mac-section .call-to-action button {
@@ -421,7 +437,8 @@ header {
     margin: 0; }
   #team-section #team-bg-image {
     width: 100%;
-    float: right; }
+    float: right;
+    max-width: 500px; }
   #team-section #team-content {
     color: #888; }
   #team-section .register {
@@ -441,12 +458,13 @@ header {
     margin-top: 30px; }
   #team-section .tab-img {
     width: 100%;
-    background-image: url("/assets/tab_backgroundgradient.png"); }
+    background-image: url("../assets/tab_backgroundgradient.png"); }
   #team-section #team-main-image {
     position: relative;
     top: -10px;
     height: 40px;
-    margin-top: 10px; }
+    margin-top: 10px;
+    max-width: 150px; }
   #team-section .nav-tabs > li.active > a, #team-section .nav-tabs > li.active > a:focus, #team-section .nav-tabs > li.active > a:hover {
     border: 1px solid transparent;
     margin-top: -30px;
@@ -486,17 +504,18 @@ header {
   padding-top: 30px;
   padding-bottom: 30px;
   /* ie fallbacks */
-  background-image: url("/assets/background_pattern.jpg");
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale')";
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale');
+  background-image: url("../assets/background_pattern.jpg");
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.../assets/background_pattern.jpg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.../assets/background_pattern.jpg', sizingMethod='scale');
   /* desired styles */
-  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/background_pattern.jpg");
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("/assets/background_pattern.jpg");
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/background_pattern.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../assets/background_pattern.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover; }
   #register-section .col-sm-6:first-child .form-control {
-    float: right; }
+    float: right;
+    margin-left: 1000px; }
   #register-section .checkbox {
     margin-left: 20px; }
   #register-section input, #register-section select, #register-section #checkbox-container, #register-section #register-btn-container {
@@ -526,7 +545,8 @@ header {
 
 @media (max-width: 768px) {
   #register-section .col-sm-6:first-child .form-control {
-    float: none; }
+    float: none;
+    margin-left: auto; }
   #register-section input, #register-section select {
     margin: 15px auto; }
   #register-section #checkbox-container {

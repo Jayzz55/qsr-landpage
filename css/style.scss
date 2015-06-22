@@ -144,6 +144,10 @@ header {
     }
   }
 
+  #windows-content {
+    color: #888;
+  }
+
   #windows-nav, #windows-content {
     box-sizing: border-box;
     margin: 0;
@@ -152,6 +156,13 @@ header {
   #windows-bg-image {
     width: 100%;
     float: right;
+  }
+
+  .register {
+    color: #27f;
+    strong {
+      text-decoration: underline;
+    }
   }
 
   #myTabs>li{
@@ -221,9 +232,6 @@ header {
     margin-right: 10%;
     margin-bottom: 20px;
     padding: 10px;
-    // border: 1px solid red;
-    -webkit-box-shadow: -1px 1px 10px 2px rgba(142,203,250,1);
-    -moz-box-shadow: -1px 1px 10px 2px rgba(142,203,250,1);
     box-shadow: -1px 1px 10px 2px rgba(142,203,250,1);
 
     p {
@@ -252,8 +260,6 @@ header {
     button {
       background: #f59329;
       background-image: linear-gradient(to bottom, #f59329, #de6f0d);
-      -webkit-border-radius: 8;
-      -moz-border-radius: 8;
       border-radius: 8px;
       color: #ffffff;
       font-size: 1rem;
@@ -341,6 +347,225 @@ header {
   }
 }
 
+/* MAC SECTION */
+#mac-section {
+  margin-bottom: 30px;
+
+  /* ie fallbacks */
+  background-image: url('../assets/background_mac.jpg');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_mac.jpg', sizingMethod='scale')";
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_mac.jpg', sizingMethod='scale');
+  /* desired styles */
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../assets/background_mac.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  #mac-content {
+    color: #888;
+  }
+
+  #mac-nav {
+    padding-top: 60px;
+    background: linear-gradient(to top, rgba(220,220,220,0.3), rgba(0,0,0,0));;
+  }
+
+  .register {
+    color: #27f;
+    strong {
+      text-decoration: underline;
+    }
+  }
+
+  .nav-tabs {
+    border-bottom: none;
+  }
+
+  #mac-nav, #mac-content {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  #mac-bg-image {
+    min-width: 100%;
+    float: left;
+  }
+
+  #myTabs>li{
+    width: 25%;
+    height: 62px;
+    text-align: center;
+    vertical-align: center;
+    opacity: 0.5;
+  }
+
+  #myTabs>li.active{
+    opacity: 1;
+  }
+
+  .tab-content {
+    margin-bottom: 50px;
+    margin-top: 30px;
+  }
+
+  .tab-img {
+    width: 100%;
+    background-image: url('../assets/tab_backgroundgradient.png');
+  }
+
+  #mac-main-image{
+    position: relative;
+    top: -10px;
+    height:40px;
+    margin-top: 10px;
+  }
+
+  .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    border: 1px solid transparent;
+    margin-top: -60px;
+    padding-top: 60px;
+    background-color: #ccc;
+  }
+
+  .nav-tabs>li>a {
+    margin-top: -10px;
+  }
+
+  .col-md-4 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .call-to-action{
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: -1px 1px 10px 2px rgba(142,203,250,1);
+
+    p {
+      font-size: 1.2rem;
+      color: #eee;
+    }
+
+    strong {
+      font-size: 1.5rem;
+      color: #fff;
+    }
+
+    small {
+      font-size: 0.9rem;
+    }
+
+    /* ie fallbacks */
+    background-image: url('../assets/background_pattern.jpg');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale')";
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_pattern.jpg', sizingMethod='scale');
+    /* desired styles */
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../assets/background_pattern.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    button {
+      background: #f59329;
+      background-image: linear-gradient(to bottom, #f59329, #de6f0d);
+      border-radius: 8px;
+      color: #ffffff;
+      font-size: 1rem;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      letter-spacing: 1px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      border: solid #ddd 2px;
+    }
+  }
+}
+
+@media (max-width: 992px){
+  #mac-section{
+    background: #ccc;
+    #mac-img-container {
+      height: 250px;
+      /* ie fallbacks */
+      background-image: url('../assets/background_mac.jpg');
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_mac.jpg', sizingMethod='scale')";
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='./assets/background_mac.jpg', sizingMethod='scale');
+      /* desired styles */
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../assets/background_mac.jpg');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+    }
+
+    .call-to-action{
+      button {
+        width: 45%;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        margin-left:5px;
+        margin-right: 5px;
+      }
+      .col-md-3{
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px){
+  #mac-section{
+    #mac-main-image{
+      max-width: 150px;
+    }
+
+    #starter-main-image{
+      left: -8px;
+      max-width: 100px;
+    }
+  }
+}
+
+@media (max-width: 768px){
+  #mac-section{
+    #myTabs>li{
+      height: 80px;
+      width: 50%;
+    }
+    .tab-img {
+      width: 80%;
+    }
+    #mac-bg-image {
+      width: 50%;
+    }
+    #mac-main-image{
+      left: -9px;
+      top: -5px;
+      width: 150px;
+    }
+
+    .nav-tabs > li.bottom-tabs.active > a:focus, .nav-tabs > li.bottom-tabs.active > a:hover, .nav-tabs > li.bottom-tabs.active > a:active, .nav-tabs > li.bottom-tabs.active > a:visited, .nav-tabs > li.bottom-tabs.active > a{
+      margin-top: 0;
+      padding-top: 17px;
+    }
+
+    #mac-nav {
+      ul {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+
+    .call-to-action{
+      margin: auto;
+      margin-bottom: 20px;
+    }
+    
+  }
+}
+
 /* TEAM SECTION */
 #team-section{
   margin-bottom: 30px;
@@ -363,6 +588,17 @@ header {
     float: right;
   }
 
+  #team-content {
+    color: #888;
+  }
+
+  .register {
+    color: #27f;
+    strong {
+      text-decoration: underline;
+    }
+  }
+
   #myTabs>li{
     width: 25%;
     height: 62px;
@@ -376,7 +612,7 @@ header {
   }
 
   .tab-content {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     margin-top: 30px;
   }
 
